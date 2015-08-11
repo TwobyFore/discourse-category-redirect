@@ -13,7 +13,16 @@ export default {
           if (category.get('read_restricted')) {
             buffer.push("<i class='fa fa-lock'></i>");
           }
-          buffer.push("<a href='" + Discourse.SiteSettings.redirect_link + categoryUrl + "'>");
+
+          var redirect_link;
+
+          if(Discourse.SiteSettings.redirect_link){
+            redirect_link = Discourse.SiteSettings.redirect_link;
+          } else {
+            redirect_link = Discourse.getURL("/c/");
+          }
+
+          buffer.push("<a href='" + redirect_link + categoryUrl + "'>");
           buffer.push("<span class='category-name'>" + categoryName + "</span>");
 
           if (!Em.isEmpty(logoUrl)) { buffer.push("<img src='" + logoUrl + "' class='category-logo'>"); }
