@@ -1,2 +1,2 @@
 # discourse-topic-redirect
-Redirect Discourse category slug links to a custom url.
+Redirect Discourse category links to a custom url.
