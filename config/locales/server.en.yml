@@ -1,3 +1,3 @@
 en:
   site_settings:
-    redirect_link: "Link to redirect categories"
+    redirect_link: "URL for categories redirect (include http(s)://). Category slug will be appended."
